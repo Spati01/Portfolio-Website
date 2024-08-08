@@ -525,3 +525,247 @@ form button:hover{
         margin-top: 2rem;
     }
 }
+
+
+
+
+/* Skills */
+
+/* Base styles */
+.tech-container .tech-box {
+    width: 40%; /* Default width for small screens */
+    max-width: 500px; /* Maximum width for larger screens */
+    min-height: 50px; /* Minimum height to ensure it does not get smaller */
+    background: var(--second-bg-color);
+    padding: 2rem; /* Padding */
+    border-radius: 2rem; /* Rounded corners */
+    text-align: center; /* Center text */
+    border: .2rem solid var(--bg-color); /* Border color */
+    transition: all 0.5s ease; /* Smooth transition for all properties */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin: auto; /* Center the box horizontally */
+    transform: scale(1); /* Initial scale */
+}
+
+
+/* Hover animation */
+.tech-container .tech-box:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    background: var(--highlight-bg-color); /* Change background on hover */
+}
+
+/* Icon animation */
+.tech-container .tech-box i {
+    font-size: 5rem; /* Default icon size */
+    color: var(--main-color); /* Icon color */
+    transition: font-size 0.5s ease; /* Smooth transition for icon size */
+}
+
+/* Heading animation */
+.tech-container .tech-box h3 {
+    font-size: 2rem; /* Default font size */
+    margin: 1rem 0; /* Margin around heading */
+    transition: font-size 0.5s ease; /* Smooth transition for font size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tech-container .tech-box {
+        width: 95%; /* Adjust width for tablets */
+    }
+
+    .tech-container .tech-box h3 {
+        font-size: 1.5rem; /* Reduce font size */
+    }
+
+    .tech-container .tech-box i {
+        font-size: 3rem; /* Reduce icon size */
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-container .tech-box {
+        width: 100%; /* Full width for mobile devices */
+    }
+
+    .tech-container .tech-box h3 {
+        font-size: 1.2rem; /* Further reduce font size */
+    }
+
+    .tech-container .tech-box i {
+        font-size: 2rem; /* Further reduce icon size */
+    }
+}
+
+
+
+.skills {
+    padding: 2rem;
+    overflow: hidden; /* Hide scrollbars */
+    position: relative; /* Needed for absolute positioning inside */
+}
+
+.tech-container {
+    margin-bottom: 0.5rem; /* Spacing between front-container and skills-container */
+}
+
+.tech-container .tech-box {
+    width: 90%; /* Adjusted width */
+    max-width: 500px; /* Max width for larger screens */
+    height: 50px; /* Height adjusts based on content */
+    background: var(--second-bg-color);
+    padding: 2rem; /* Padding */
+    border-radius: 2rem; /* Rounded corners */
+    text-align: center; /* Center text */
+    border: .2rem solid var(--bg-color); /* Border color */
+    transition: all 0.5s ease; /* Smooth transition for all properties */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin: auto; /* Center the box horizontally */
+    transform: scale(1); /* Initial scale */
+    opacity: 1; /* Initial opacity */
+    animation: fadeIn 1s ease-out; /* Animation for initial fade-in effect */
+    margin-top:50px;
+
+}
+
+.tech-container .tech-box:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    background: var(--highlight-bg-color); /* Change background on hover */
+}
+
+/* Animation for fading in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Wrapper for scrolling effect */
+.skills-wrapper {
+    position: relative; /* Positioning context for scrolling */
+    width: 100%; /* Full width */
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden; /* Hide overflow to keep the scroll effect contained */
+}
+
+.skills-container {
+    display: flex; /* Use flexbox for horizontal alignment */
+    flex-wrap: nowrap; /* Ensure items don't wrap */
+    width: auto; /* Width will be set dynamically by JavaScript */
+    animation: scrollRightLeft 30s linear infinite; /* Continuous scroll animation */
+}
+
+@keyframes scrollRightLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.skills-container .skills-box {
+    width: 20rem; /* Set a fixed width */
+    height: auto; /* Height adjusts based on content */
+    background: var(--second-bg-color);
+    padding: 2rem; /* Adjust padding as needed */
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: transform 0.3s ease, background 0.3s ease; /* Animate transform and background */
+    display: flex; /* Use flexbox to center contents */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    opacity: 0.9; /* Slightly less opaque initially */
+    transform: translateY(20px); /* Initial position shifted down */
+    animation: fadeIn 1s ease-out; /* Animation for initial fade-in effect */
+    
+}
+
+.skills-container .skills-box:hover {
+    transform: translateY(0) scale(1.05); /* Slightly scale up on hover */
+    background: var(--highlight-bg-color); /* Change background on hover */
+    opacity: 1; /* Full opacity on hover */
+}
+
+.skills-container .skills-box i {
+    font-size: 5rem; /* Adjust icon size if needed */
+    color: var(--main-color);
+    transition: font-size 0.3s ease; /* Smooth transition for icon size */
+}
+
+.skills-container .skills-box h3 {
+    font-size: 2rem; /* Adjust to fit the desired size */
+    margin: 1rem 0; /* Adjust margins as needed */
+    transition: font-size 0.3s ease; /* Smooth transition for font size */
+}
+
+.skills-container .skills-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 2rem; /* Adjust margins as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-container .skills-box {
+        width: 30rem; /* Adjust width for tablets */
+    }
+
+    .skills-container .skills-box h3 {
+        font-size: 1.5rem; /* Reduce font size */
+    }
+
+    .skills-container .skills-box i {
+        font-size: 3rem; /* Reduce icon size */
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container .skills-box {
+        width: 100%; /* Full width for mobile devices */
+    }
+
+    .skills-container .skills-box h3 {
+        font-size: 1.2rem; /* Further reduce font size */
+    }
+
+    .skills-container .skills-box i {
+        font-size: 2rem; /* Further reduce icon size */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
